@@ -63,7 +63,7 @@ subButtonWrapper.addEventListener('mouseover', () => {
   subButtons = document.querySelectorAll('.sub-button');
   subButtons.forEach(subButton => {
     subButton.addEventListener('click', e => {
-      let image = e.target.innerText;
+      let image = e.target.innerText.toLowerCase();
       ui.changeImage(mainCategory, image);
     });
   });
