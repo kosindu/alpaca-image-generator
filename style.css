@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgba(108, 44, 114, 0.8);
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h1 span {
+  color: #fff;
+}
+
+button {
+  display: inline;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0.6rem;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  color: #fff;
+  margin: 5px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.seperate-line {
+  width: 100%;
+  background-color: #000;
+  height: 2px;
+  border-radius: 1px;
+  margin: 3rem 0;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'image-wrap-box button-wrap';
+  grid-gap: 3rem;
+}
+
+.header {
+  grid-area: header;
+}
+
+.image-wrap-box {
+  grid-area: image-wrap-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-wrap {
+  width: 360px;
+  height: 360px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.image-wrap img {
+  width: 100%;
+  position: absolute;
+}
+
+.button-wrap {
+  grid-area: button-wrap;
+}
+
+.main-buttons h2,
+.sub-buttons h2 {
+  margin-bottom: 1rem;
+}
