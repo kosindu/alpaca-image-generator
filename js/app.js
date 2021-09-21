@@ -51,7 +51,7 @@ ui.showMainCategories(ui.getImageNodeArray());
 
 buttons = document.querySelectorAll('.main-button');
 buttons.forEach((button, index) => {
-  button.addEventListener('click', function (e) {
+  button.addEventListener('click', e => {
     mainCategory = button.innerText.toLowerCase();
     ui.clearSubCategories();
     ui.showSubCategories(mainCategory, index);
@@ -59,10 +59,10 @@ buttons.forEach((button, index) => {
 });
 
 subButtonWrapper = document.querySelector('.sub-button-collection');
-subButtonWrapper.addEventListener('mouseover', function () {
+subButtonWrapper.addEventListener('mouseover', () => {
   subButtons = document.querySelectorAll('.sub-button');
   subButtons.forEach(subButton => {
-    subButton.addEventListener('click', function (e) {
+    subButton.addEventListener('click', e => {
       let image = e.target.innerText;
       ui.changeImage(mainCategory, image);
     });
