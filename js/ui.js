@@ -15,6 +15,10 @@ class UI {
     });
   };
 
+  showSubButtonHeading(heading) {
+    document.getElementById('sub-button-heading').innerText = heading;
+  }
+
   showSubCategories = (mainCategory, index) => {
     const subCategories = mainItemsArray[index];
     subCategories.forEach(subCategory => {
@@ -66,4 +70,14 @@ class UI {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
   }
+
+  addActiveClass = button => {
+    button.className += ' active';
+  };
+
+  removeActiveClasses = buttons => {
+    buttons.forEach((button, index) => {
+      button.classList.remove('active');
+    });
+  };
 }

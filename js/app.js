@@ -53,6 +53,9 @@ buttons = document.querySelectorAll('.main-button');
 buttons.forEach((button, index) => {
   button.addEventListener('click', e => {
     mainCategory = button.innerText.toLowerCase();
+    ui.removeActiveClasses(buttons);
+    ui.addActiveClass(button);
+    ui.showSubButtonHeading(mainCategory);
     ui.clearSubCategories();
     ui.showSubCategories(mainCategory, index);
   });
