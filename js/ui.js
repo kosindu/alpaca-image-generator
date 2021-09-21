@@ -36,7 +36,7 @@ class UI {
   };
 
   changeImage = (mainCategory, image) => {
-    const imageLink = `./img/alpaca/${mainCategory}/${image}.png`;
+    const imageLink = `./img/${mainCategory}/${image}.png`;
     const toChangeImage = document.getElementById(mainCategory);
     toChangeImage.innerHTML = `<img src="${imageLink}" alt="" />`;
   };
