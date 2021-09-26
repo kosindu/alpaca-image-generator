@@ -1,1 +1,1 @@
-# alpacaimagegenerator.github.io
+# alpacaimagegenerator
